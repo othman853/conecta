@@ -1,9 +1,11 @@
+#Competencias de Empresas
 class Competence
   include DataMapper::Resource
-  property :id,         Serial
-  property :name,       String, :required => true
-  has 1, :companyArea , :required => false
+  property :id, Serial
+  property :name, Text, :required => true
 
-  belongs_to :company, :required => false
-  belongs_to :companyArea, :required => false
+
+  has n, :companies, :through => :competence_institutions
+  has n, :competence_institutions
+  belongs_to :competence_area
 end

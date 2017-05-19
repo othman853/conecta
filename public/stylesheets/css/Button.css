@@ -1,0 +1,20 @@
+/* line 1, ../../../sass/Button.scss */
+.Button {
+  background-color: rgba(55, 113, 200, 1);
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  outline: 0;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+.Button:hover {
+  background-color: rgba(55, 113, 200, 0.8);
+}

@@ -6,10 +6,17 @@ gem 'data_mapper'
 
 gem 'puma'
 gem 'tux'
-gem 'rspec'
 
-group :development do
+group :development, :test do
+  gem 'simplecov'
+
+
+  gem 'rerun'
+  gem "rack", '2.0.2'
+  gem 'rspec', '~> 2.14'
+  gem "rack-test"
   gem 'sqlite3'
+  gem 'capybara'
   gem 'dm-sqlite-adapter'
 end
 

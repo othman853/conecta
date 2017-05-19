@@ -1,3 +1,6 @@
 development.db
 .bundle/*
-config/csv/*
+csv/files/*
+vendor/*
+.sass-cache
+coverage

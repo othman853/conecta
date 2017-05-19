@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 
@@ -9,7 +8,8 @@ configure do
   set :root, APP_ROOT.to_path
   enable :sessions
   set :session_secret, ENV['SESSION_KEY'] || 'rubyrubyruby'
-  set :views, File.join(Sinatra::Application.root, "app", "views")
-end
 
+  # Move to app/controllers/config.rb
+  # set :views, File.join(Sinatra::Application.root, "app", "views")
+end
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }

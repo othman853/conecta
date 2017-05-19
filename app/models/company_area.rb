@@ -1,8 +1,7 @@
-
+#Area das Empresas
 class CompanyArea
-    include DataMapper::Resource
+  include DataMapper::Resource
   property :id,    Serial
   property :name,  String, :required => true
-
-  belongs_to :company, :required => false
+  has n, :companies, :through => Resource
 end
